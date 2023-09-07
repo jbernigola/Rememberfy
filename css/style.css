@@ -5,9 +5,17 @@
   box-sizing: border-box;
 }
 
-main {
+body {
   background-color: beige;
-  width: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  width: 90%;
+  position: relative;
+  left: 5%;
   min-height: 75vh;
   padding-top: 25px;
   padding-bottom: 25px;
@@ -23,6 +31,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: white;
   border-color: #9c29b7;
   border-bottom-style: solid;
   border-bottom-width: 2px;
