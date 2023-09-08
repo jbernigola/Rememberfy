@@ -13,13 +13,77 @@ body {
 main {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     background-color: white;
     width: 90%;
     position: relative;
     left: 5%;
     min-height: 75vh;
-    padding-top: 25px;
+    margin-top: 20px;
     padding-bottom: 25px;
+
+    .banner {
+        // PRÓXIMAMENTE UN BANNER-CARRUSEL!
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        img {
+            max-height: 400px;
+            overflow: hidden;
+        }
+    }
+
+    .bienvenidos {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 20px;
+
+        .div-bienvenidos {
+            width: 90%;
+            justify-content: space-between;
+            height: min-content;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: palegoldenrod;
+
+            .texto-bienvenida {
+                justify-content: center;
+                flex-direction: column;
+                background-color: #e5b8e6;
+                height: min-content;
+                padding: 5px;
+                margin-right: 10px;
+
+                h1 {
+                    font-family: "Finger Paint", cursive;
+
+                    font-size: 24px;
+                    color: #b229b7;
+                }
+
+                p {
+                    font-size: 16pt;
+                    text-indent: 20px;
+                    text-align: justify;
+                    padding: 20px;
+                    color: #9c29b7;
+                }
+            }
+
+            .contenedor-img-bienvenida {
+                margin-left: 10;
+                img {
+                    width: 336px;
+                    height: 216px;
+                }
+            }
+        }
+
+    }
 }
 
 footer {

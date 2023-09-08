@@ -12,13 +12,68 @@ body {
 main {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   background-color: white;
   width: 90%;
   position: relative;
   left: 5%;
   min-height: 75vh;
-  padding-top: 25px;
+  margin-top: 20px;
   padding-bottom: 25px;
+}
+main .banner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+main .banner img {
+  max-height: 400px;
+  overflow: hidden;
+}
+main .bienvenidos {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 20px;
+}
+main .bienvenidos .div-bienvenidos {
+  width: 90%;
+  justify-content: space-between;
+  height: -moz-min-content;
+  height: min-content;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: palegoldenrod;
+}
+main .bienvenidos .div-bienvenidos .texto-bienvenida {
+  justify-content: center;
+  flex-direction: column;
+  background-color: #e5b8e6;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 5px;
+  margin-right: 10px;
+}
+main .bienvenidos .div-bienvenidos .texto-bienvenida h1 {
+  font-family: "Finger Paint", cursive;
+  font-size: 24px;
+  color: #b229b7;
+}
+main .bienvenidos .div-bienvenidos .texto-bienvenida p {
+  font-size: 16pt;
+  text-indent: 20px;
+  text-align: justify;
+  padding: 20px;
+  color: #9c29b7;
+}
+main .bienvenidos .div-bienvenidos .contenedor-img-bienvenida {
+  margin-left: 10;
+}
+main .bienvenidos .div-bienvenidos .contenedor-img-bienvenida img {
+  width: 336px;
+  height: 216px;
 }
 
 footer {
