@@ -90,13 +90,14 @@ main {
     padding-bottom: 25px;
 }
 
+// INDEX
 .banner {
     // PRÓXIMAMENTE UN BANNER-CARRUSEL!
     display: flex;
     justify-content: center;
 
     img {
-        max-height: 400px;
+        width: 100%;
         overflow: hidden;
     }
 }
@@ -154,14 +155,112 @@ section.bienvenidos {
 
 section.designs {
     display: flex;
-    width: 100%;
+    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    background-color: #b229b7; //Test
-    min-height: 500px; //Test
+    background-color: #e5b8e6; //Test
+    width: 90%;
+    position: relative;
+    left: 5%;
+    border-radius: 20px;
 
     h1 {
         font-family: "Finger Paint", cursive;
+        font-style: italic;
+        color: #b229b7;
+        margin: 10px;
     }
+
+    .each-design {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .design {
+            border-radius: 20%;
+            border-color: #b229b7;
+            border-style: solid;
+            margin-inline: 10px;
+            overflow: hidden;
+            min-width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+
+            img {
+                width: 200px;
+                height: 200px;
+                opacity: .8;
+                transition: all .3s;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+
+
+
+}
+
+// ABOUT US
+
+section.about-us {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+
+
+    .articles-about-us {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        width: 90%;
+        height: min-content;
+        left: 5%;
+        align-items: center;
+        background-color: #e5b8e6;
+        border-radius: 20px;
+        margin: 20px;
+
+        .textos-about-us {
+            justify-content: center;
+            flex-direction: column;
+            height: min-content;
+            padding: 40px 0px 40px 40px;
+            margin-right: 10px;
+            max-width: 700px;
+
+            h1 {
+                font-family: "Finger Paint", cursive;
+                font-size: 24px;
+                color: #b229b7;
+            }
+
+            p {
+                font-size: 16pt;
+                text-indent: 20px;
+                text-align: justify;
+                padding: 20px;
+                color: #9c29b7;
+            }
+        }
+
+        .contenedor-img-about-us {
+
+            #LOGO{
+                width: 250px;
+               height: 250px;
+            }
+
+            img {
+                width: 336px;
+                height: 216px;
+            }
+        }
+    }
+
 }
 
 .footer {
@@ -181,10 +280,10 @@ section.designs {
         font-family: cursive;
         font-style: italic;
         color: white;
-        
+
     }
 
-    .redes-sociales{
+    .redes-sociales {
         display: flex;
         width: 150px;
         height: auto;

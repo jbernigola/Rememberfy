@@ -87,7 +87,7 @@ main {
   justify-content: center;
 }
 .banner img {
-  max-height: 400px;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -137,13 +137,93 @@ section.bienvenidos .div-bienvenidos .contenedor-img-bienvenida img {
 
 section.designs {
   display: flex;
-  width: 100%;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  background-color: #b229b7;
-  min-height: 500px;
+  background-color: #e5b8e6;
+  width: 90%;
+  position: relative;
+  left: 5%;
+  border-radius: 20px;
 }
 section.designs h1 {
   font-family: "Finger Paint", cursive;
+  font-style: italic;
+  color: #b229b7;
+  margin: 10px;
+}
+section.designs .each-design {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+section.designs .each-design .design {
+  border-radius: 20%;
+  border-color: #b229b7;
+  border-style: solid;
+  margin-inline: 10px;
+  overflow: hidden;
+  min-width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+section.designs .each-design .design img {
+  width: 200px;
+  height: 200px;
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+section.designs .each-design .design img:hover {
+  opacity: 1;
+}
+
+section.about-us {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+}
+section.about-us .articles-about-us {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  width: 90%;
+  height: -moz-min-content;
+  height: min-content;
+  left: 5%;
+  align-items: center;
+  background-color: #e5b8e6;
+  border-radius: 20px;
+  margin: 20px;
+}
+section.about-us .articles-about-us .textos-about-us {
+  justify-content: center;
+  flex-direction: column;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 40px 0px 40px 40px;
+  margin-right: 10px;
+  max-width: 700px;
+}
+section.about-us .articles-about-us .textos-about-us h1 {
+  font-family: "Finger Paint", cursive;
+  font-size: 24px;
+  color: #b229b7;
+}
+section.about-us .articles-about-us .textos-about-us p {
+  font-size: 16pt;
+  text-indent: 20px;
+  text-align: justify;
+  padding: 20px;
+  color: #9c29b7;
+}
+section.about-us .articles-about-us .contenedor-img-about-us #LOGO {
+  width: 250px;
+  height: 250px;
+}
+section.about-us .articles-about-us .contenedor-img-about-us img {
+  width: 336px;
+  height: 216px;
 }
 
 .footer {
