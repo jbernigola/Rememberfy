@@ -6,11 +6,11 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: beige;
 }
 
-main{
+main {
     display: flex;
     justify-content: center;
     background-color: white;
@@ -22,34 +22,37 @@ main{
     padding-bottom: 25px;
 }
 
-footer{
+footer {
     display: flex;
 }
 
-.rememberfy-nav {
+header {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 70px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     background-color: white;
     border-color: #9c29b7;
     border-bottom-style: solid;
     border-bottom-width: 2px;
+    padding-inline: 10%;
 
-    .logo-label{
+
+    .logo-label {
         display: flex;
         width: auto;
         height: 100%;
         justify-content: space-around;
         align-items: center;
+
         .logo {
             width: 84px;
             height: 54px;
             background: #b229b7;
             border-radius: 27px 27px 27px 27px;
         }
-        .rememberfy-label{
+
+        .rememberfy-label {
             font-family: 'Finger Paint', cursive;
             font-size: 20pt;
             font-style: italic;
@@ -58,18 +61,30 @@ footer{
             padding-left: 20px;
         }
     }
-    ul{
+
+    .rememberfy-nav {
+        width: fit-content;
+        height: 70px;
         display: flex;
-        flex-direction: row;
-        li{
-            margin-inline: 20px;
-            list-style-type: none;
-            
-            a{
-                font-family: 'Finger Paint', cursive;
-                font-size: 16px;
-                text-decoration: none;
-                color: #b229b7;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        right: 0;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+
+            li {
+                margin-inline: 20px;
+                list-style-type: none;
+
+                a {
+                    font-family: 'Finger Paint', cursive;
+                    font-size: 16px;
+                    text-decoration: none;
+                    color: #b229b7;
+                }
             }
         }
     }

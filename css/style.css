@@ -25,31 +25,31 @@ footer {
   display: flex;
 }
 
-.rememberfy-nav {
+header {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 70px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   background-color: white;
   border-color: #9c29b7;
   border-bottom-style: solid;
   border-bottom-width: 2px;
+  padding-inline: 10%;
 }
-.rememberfy-nav .logo-label {
+header .logo-label {
   display: flex;
   width: auto;
   height: 100%;
   justify-content: space-around;
   align-items: center;
 }
-.rememberfy-nav .logo-label .logo {
+header .logo-label .logo {
   width: 84px;
   height: 54px;
   background: #b229b7;
   border-radius: 27px 27px 27px 27px;
 }
-.rememberfy-nav .logo-label .rememberfy-label {
+header .logo-label .rememberfy-label {
   font-family: "Finger Paint", cursive;
   font-size: 20pt;
   font-style: italic;
@@ -57,15 +57,25 @@ footer {
   color: #b229b7;
   padding-left: 20px;
 }
-.rememberfy-nav ul {
+header .rememberfy-nav {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  right: 0;
+}
+header .rememberfy-nav ul {
   display: flex;
   flex-direction: row;
 }
-.rememberfy-nav ul li {
+header .rememberfy-nav ul li {
   margin-inline: 20px;
   list-style-type: none;
 }
-.rememberfy-nav ul li a {
+header .rememberfy-nav ul li a {
   font-family: "Finger Paint", cursive;
   font-size: 16px;
   text-decoration: none;
