@@ -9,77 +9,6 @@ body {
   background-color: beige;
 }
 
-main {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background-color: white;
-  width: 90%;
-  position: relative;
-  left: 5%;
-  min-height: 75vh;
-  margin-top: 20px;
-  padding-bottom: 25px;
-}
-main .banner {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-main .banner img {
-  max-height: 400px;
-  overflow: hidden;
-}
-main .bienvenidos {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  flex-direction: row;
-  margin-top: 20px;
-}
-main .bienvenidos .div-bienvenidos {
-  width: 90%;
-  justify-content: space-between;
-  height: -moz-min-content;
-  height: min-content;
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  background-color: palegoldenrod;
-}
-main .bienvenidos .div-bienvenidos .texto-bienvenida {
-  justify-content: center;
-  flex-direction: column;
-  background-color: #e5b8e6;
-  height: -moz-min-content;
-  height: min-content;
-  padding: 5px;
-  margin-right: 10px;
-}
-main .bienvenidos .div-bienvenidos .texto-bienvenida h1 {
-  font-family: "Finger Paint", cursive;
-  font-size: 24px;
-  color: #b229b7;
-}
-main .bienvenidos .div-bienvenidos .texto-bienvenida p {
-  font-size: 16pt;
-  text-indent: 20px;
-  text-align: justify;
-  padding: 20px;
-  color: #9c29b7;
-}
-main .bienvenidos .div-bienvenidos .contenedor-img-bienvenida {
-  margin-left: 10;
-}
-main .bienvenidos .div-bienvenidos .contenedor-img-bienvenida img {
-  width: 336px;
-  height: 216px;
-}
-
-footer {
-  display: flex;
-}
-
 header {
   display: flex;
   justify-content: space-between;
@@ -90,6 +19,9 @@ header {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   padding-inline: 10%;
+  position: sticky;
+  z-index: 1;
+  top: 0;
 }
 header .logo-label {
   display: flex;
@@ -135,4 +67,107 @@ header .rememberfy-nav ul li a {
   font-size: 16px;
   text-decoration: none;
   color: #b229b7;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  width: 90%;
+  position: relative;
+  left: 5%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 25px;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+}
+.banner img {
+  max-height: 400px;
+  overflow: hidden;
+}
+
+section.bienvenidos {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+section.bienvenidos .div-bienvenidos {
+  width: 90%;
+  justify-content: space-around;
+  height: -moz-min-content;
+  height: min-content;
+  display: flex;
+  align-items: center;
+  background-color: #e5b8e6;
+  border-radius: 20px;
+}
+section.bienvenidos .div-bienvenidos .texto-bienvenida {
+  justify-content: center;
+  flex-direction: column;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 40px 0px 40px 40px;
+  margin-right: 10px;
+  max-width: 700px;
+}
+section.bienvenidos .div-bienvenidos .texto-bienvenida h1 {
+  font-family: "Finger Paint", cursive;
+  font-size: 24px;
+  color: #b229b7;
+}
+section.bienvenidos .div-bienvenidos .texto-bienvenida p {
+  font-size: 16pt;
+  text-indent: 20px;
+  text-align: justify;
+  padding: 20px;
+  color: #9c29b7;
+}
+section.bienvenidos .div-bienvenidos .contenedor-img-bienvenida img {
+  width: 336px;
+  height: 216px;
+}
+
+section.designs {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: #b229b7;
+  min-height: 500px;
+}
+section.designs h1 {
+  font-family: "Finger Paint", cursive;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  background-color: darkorchid;
+  font-size: 14pt;
+  border-top-style: solid;
+  border-color: #9c29b7;
+  position: relative;
+  bottom: 0;
+}
+.footer p {
+  margin: 10px;
+  font-family: cursive;
+  font-style: italic;
+  color: white;
+}
+.footer .redes-sociales {
+  display: flex;
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */
