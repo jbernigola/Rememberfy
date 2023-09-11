@@ -17,12 +17,13 @@ header {
     height: 70px;
     background-color: white;
     border-color: #9c29b7;
-    border-bottom-style: solid;
     border-bottom-width: 2px;
     padding-inline: 10%;
     position: sticky;
     z-index: 1;
     top: 0;
+
+    
 
 
     .logo-label {
@@ -61,12 +62,34 @@ header {
         ul {
             display: flex;
             flex-direction: row;
+            height: 100%;
+            width: max-content;
+
+            #li-icon{
+                width: 50px;
+            }
 
             li {
-                margin-inline: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 list-style-type: none;
+                height: 100%;
+                transition: all .1s;
+                width: 100px;
+
+                &:hover {
+                    border-bottom: #9c29b7;
+                    border-bottom-style: solid;
+                    border-width: 3px;
+                }
 
                 a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
                     font-family: 'Finger Paint', cursive;
                     font-size: 16px;
                     text-decoration: none;
@@ -191,7 +214,8 @@ section.designs {
                 height: 200px;
                 opacity: .8;
                 transition: all .3s;
-                &:hover{
+
+                &:hover {
                     opacity: 1;
                 }
             }
@@ -249,9 +273,9 @@ section.about-us {
 
         .contenedor-img-about-us {
 
-            #LOGO{
+            #LOGO {
                 width: 250px;
-               height: 250px;
+                height: 250px;
             }
 
             img {
