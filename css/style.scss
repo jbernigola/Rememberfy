@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+:root{
+    --color-primario: #9c29b7;
+    --texto-oscuro: #b229b7;
+    --font-rememberfy: "Finger Paint"
+}
 
 * {
     margin: 0;
@@ -15,9 +19,7 @@ header {
     justify-content: space-between;
     width: 100%;
     height: 70px;
-    background-color: white;
-    border-color: #9c29b7;
-    border-bottom-width: 2px;
+    background-color: var(--color-primario);
     padding-inline: 10%;
     position: sticky;
     z-index: 1;
@@ -36,7 +38,7 @@ header {
         .logo {
             width: 84px;
             height: 54px;
-            background: #b229b7;
+            background: #ffffff;
             border-radius: 27px 27px 27px 27px;
         }
 
@@ -45,7 +47,7 @@ header {
             font-size: 20pt;
             font-style: italic;
             text-decoration: none;
-            color: #b229b7;
+            color: white;
             padding-left: 20px;
         }
     }
@@ -79,7 +81,7 @@ header {
                 width: 100px;
 
                 &:hover {
-                    border-bottom: #9c29b7;
+                    border-bottom: var(--color-primario);
                     border-bottom-style: solid;
                     border-width: 3px;
                 }
@@ -93,7 +95,8 @@ header {
                     font-family: 'Finger Paint', cursive;
                     font-size: 16px;
                     text-decoration: none;
-                    color: #b229b7;
+                    color: white;
+                    //color: #b229b7;
                 }
             }
         }
@@ -104,6 +107,7 @@ main {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    align-items: center;
     background-color: white;
     width: 90%;
     position: relative;
@@ -118,6 +122,26 @@ main {
     // PRÓXIMAMENTE UN BANNER-CARRUSEL!
     display: flex;
     justify-content: center;
+    position: relative;
+
+    .supertexto{
+        position: absolute;
+        width: 800px;
+        font-family: var(--font-rememberfy);
+        color: white;
+        text-align: center;
+        //-webkit-text-stroke-width: 0.2px;
+        //-webkit-text-fill-color: black;
+    }
+
+    #t1{
+        font-size: 34px;
+        top: 25%;
+    }
+    #t2{
+        font-size: 20px;
+        top: 70%;
+    }
 
     img {
         width: 100%;
@@ -153,7 +177,7 @@ section.bienvenidos {
             h1 {
                 font-family: "Finger Paint", cursive;
                 font-size: 24px;
-                color: #b229b7;
+                color: var(--texto-oscuro);
             }
 
             p {
@@ -161,7 +185,7 @@ section.bienvenidos {
                 text-indent: 20px;
                 text-align: justify;
                 padding: 20px;
-                color: #9c29b7;
+                color: var(--color-primario);
             }
         }
 
@@ -183,14 +207,12 @@ section.designs {
     justify-content: center;
     background-color: #e5b8e6; //Test
     width: 90%;
-    position: relative;
-    left: 5%;
     border-radius: 20px;
 
     h1 {
         font-family: "Finger Paint", cursive;
         font-style: italic;
-        color: #b229b7;
+        color: var(--texto-oscuro);
         margin: 10px;
     }
 
@@ -201,7 +223,7 @@ section.designs {
 
         .design {
             border-radius: 20%;
-            border-color: #b229b7;
+            border-color: var(--texto-oscuro);
             border-style: solid;
             margin-inline: 10px;
             overflow: hidden;
@@ -259,7 +281,7 @@ section.about-us {
             h1 {
                 font-family: "Finger Paint", cursive;
                 font-size: 24px;
-                color: #b229b7;
+                color: var(--texto-oscuro);
             }
 
             p {
@@ -267,7 +289,7 @@ section.about-us {
                 text-indent: 20px;
                 text-align: justify;
                 padding: 20px;
-                color: #9c29b7;
+                color: var(--color-primario);
             }
         }
 
@@ -287,15 +309,32 @@ section.about-us {
 
 }
 
+.texto-superpuesto{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: fit-content;
+
+
+    img{
+        width:  400px;
+        height: 400px;
+    }
+    h1{
+        position: absolute;
+        top: 50%;
+    }
+}
+
 .footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    background-color: darkorchid;
+    background-color: var(--color-primario);
     font-size: 14pt;
     border-top-style: solid;
-    border-color: #9c29b7;
+    border-color: var(--texto-oscuro);
     position: relative;
     bottom: 0;
 
