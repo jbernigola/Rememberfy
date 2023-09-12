@@ -10,7 +10,11 @@
     box-sizing: border-box;
 }
 
-body {
+body{
+    min-height: 100vh;
+}
+
+.scrolled{
     background-color: var(--color-primario);
 }
 
@@ -20,12 +24,12 @@ header {
     width: 100%;
     height: 70px;
     //background-color: var(--color-primario);
+    transition: background-color 0.3s ease;
     background-color: transparent;
     padding-inline: 10%;
     position: sticky;
     z-index: 1;
     top: 0;
-
     .logo-label {
         display: flex;
         width: auto;
@@ -79,7 +83,7 @@ header {
                 width: 100px;
 
                 &:hover {
-                    border-bottom: var(--color-primario);
+                    border-bottom: white;
                     border-bottom-style: solid;
                     border-width: 3px;
                 }
@@ -101,16 +105,16 @@ header {
     }
 }
 
+
 main {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    position: absolute;
     top: 0;
     background-color: white;
-    margin-bottom: 20px;
-    padding-bottom: 25px;
+    //margin-bottom: 20px; porque el footer esta dentro del main...
     z-index: 0;
 }
 
@@ -323,6 +327,9 @@ section.about-us {
     }
 }
 
+
+
+
 .footer {
     display: flex;
     justify-content: space-evenly;
@@ -335,6 +342,7 @@ section.about-us {
     position: relative;
     bottom: 0;
     width: 100%;
+    margin-top: 20px;
 
     p {
         margin: 10px;

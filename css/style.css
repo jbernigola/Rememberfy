@@ -11,6 +11,10 @@
 }
 
 body {
+  min-height: 100vh;
+}
+
+.scrolled {
   background-color: var(--color-primario);
 }
 
@@ -19,6 +23,7 @@ header {
   justify-content: space-between;
   width: 100%;
   height: 70px;
+  transition: background-color 0.3s ease;
   background-color: transparent;
   padding-inline: 10%;
   position: sticky;
@@ -76,7 +81,7 @@ header .rememberfy-nav ul li {
   width: 100px;
 }
 header .rememberfy-nav ul li:hover {
-  border-bottom: var(--color-primario);
+  border-bottom: white;
   border-bottom-style: solid;
   border-width: 3px;
 }
@@ -97,11 +102,9 @@ main {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  position: relative;
+  position: absolute;
   top: 0;
   background-color: white;
-  margin-bottom: 20px;
-  padding-bottom: 25px;
   z-index: 0;
 }
 
@@ -291,6 +294,7 @@ section.about-us .articles-about-us .contenedor-img-about-us img {
   position: relative;
   bottom: 0;
   width: 100%;
+  margin-top: 20px;
 }
 .footer p {
   margin: 10px;
