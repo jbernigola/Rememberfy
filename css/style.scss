@@ -19,7 +19,8 @@ header {
     justify-content: space-between;
     width: 100%;
     height: 70px;
-    background-color: var(--color-primario);
+    //background-color: var(--color-primario);
+    background-color: transparent;
     padding-inline: 10%;
     position: sticky;
     z-index: 1;
@@ -108,13 +109,12 @@ main {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: white;
-    width: 90%;
     position: relative;
-    left: 5%;
-    margin-top: 20px;
+    top: 0;
+    background-color: white;
     margin-bottom: 20px;
     padding-bottom: 25px;
+    z-index: 0;
 }
 
 // INDEX
@@ -337,6 +337,7 @@ section.about-us {
     border-color: var(--texto-oscuro);
     position: relative;
     bottom: 0;
+    width: 100%;
 
     p {
         margin: 10px;
