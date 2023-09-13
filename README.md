@@ -1,4 +1,4 @@
-# jbernigola.github.io/Rememberfy
+$ jbernigola.github.io/Rememberfy
 
-_ Rememberfy! © 2023 - Developed by Juanito
+_Rememberfy!_ © 2023 - Developed by *Juanito*
 
