@@ -31,7 +31,7 @@ header {
     background-color: transparent;
     transition: background-color 0.3s ease;
     padding-inline: 5%;
-    position: sticky;
+    position: fixed;
     z-index: 1;
     top: 0;
 
@@ -129,10 +129,10 @@ header {
     display: flex;
     justify-content: center;
     position: relative;
-
+    
     .supertexto {
         position: absolute;
-        max-width: 1000px;
+        max-width: 80vw;
         font-family: var(--font-rememberfy);
         color: white;
         text-align: center;
@@ -161,7 +161,7 @@ header {
     }
 
     img {
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         overflow: hidden;
     }
@@ -368,4 +368,9 @@ section.about-us {
         margin-bottom: 10px;
         justify-content: space-between;
     }
+}
+
+@media screen and (max-width: 805px) {
+
+   
 }

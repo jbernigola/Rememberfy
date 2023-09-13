@@ -32,7 +32,7 @@ header {
   background-color: transparent;
   transition: background-color 0.3s ease;
   padding-inline: 5%;
-  position: sticky;
+  position: fixed;
   z-index: 1;
   top: 0;
 }
@@ -121,7 +121,7 @@ header .rememberfy-nav ul li a {
 }
 .banner .supertexto {
   position: absolute;
-  max-width: 1000px;
+  max-width: 80vw;
   font-family: var(--font-rememberfy);
   color: white;
   text-align: center;
@@ -140,7 +140,7 @@ header .rememberfy-nav ul li a {
   top: 70%;
 }
 .banner img {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
