@@ -1,20 +1,25 @@
-:root{
+:root {
     --color-primario: #9c29b7;
     --texto-oscuro: #b229b7;
-    --font-rememberfy: "Finger Paint"
+    --colorete: linear-gradient(to right, #9c29b7 60%, #6429b7);
+    --font-rememberfy: "Finger Paint";
+    --font-texts: "sans-serif";
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     min-height: 100vh;
 }
 
-.scrolled{
+.scrolled {
+    background-color: var(--color-primario);
+}
+
+#header-pages {
     background-color: var(--color-primario);
 }
 
@@ -23,13 +28,13 @@ header {
     justify-content: space-between;
     width: 100%;
     height: 70px;
-    //background-color: var(--color-primario);
-    transition: background-color 0.3s ease;
     background-color: transparent;
-    padding-inline: 10%;
+    transition: background-color 0.3s ease;
+    padding-inline: 5%;
     position: sticky;
     z-index: 1;
     top: 0;
+
     .logo-label {
         display: flex;
         width: auto;
@@ -45,7 +50,7 @@ header {
         }
 
         .rememberfy-label {
-            font-family: 'Finger Paint', cursive;
+            font-family: var(--font-rememberfy), cursive;
             font-size: 20pt;
             font-style: italic;
             text-decoration: none;
@@ -69,7 +74,7 @@ header {
             height: 100%;
             width: max-content;
 
-            #li-icon{
+            #li-icon {
                 width: 50px;
             }
 
@@ -94,7 +99,7 @@ header {
                     align-items: center;
                     width: 100%;
                     height: 100%;
-                    font-family: 'Finger Paint', cursive;
+                    font-family: var(--font-rememberfy), cursive;
                     font-size: 16px;
                     text-decoration: none;
                     color: white;
@@ -106,7 +111,7 @@ header {
 }
 
 
-main {
+.main-index {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -125,9 +130,9 @@ main {
     justify-content: center;
     position: relative;
 
-    .supertexto{
+    .supertexto {
         position: absolute;
-        width: 800px;
+        width: 1000px;
         font-family: var(--font-rememberfy);
         color: white;
         text-align: center;
@@ -135,13 +140,24 @@ main {
         //-webkit-text-fill-color: black;
     }
 
-    #t1{
+    #t1 {
+        // BANNER NORMAL
         font-size: 34px;
         top: 25%;
+        // BANNER GRANDE
+        font-size: 44px;
+        top: 30%;
     }
-    #t2{
+
+    #t2 {
+        font-style: italic;
+        // BANNER NORMAL
         font-size: 20px;
         top: 70%;
+        // BANNER GRANDE
+        font-size: 30px;
+        top: 65%;
+
     }
 
     img {
@@ -176,13 +192,13 @@ section.bienvenidos {
             max-width: 700px;
 
             h1 {
-                font-family: "Finger Paint", cursive;
-                font-size: 24px;
+                font-family: var(--font-texts), cursive;
+                font-size: 28px;
                 color: var(--texto-oscuro);
             }
 
             p {
-                font-size: 16pt;
+                font-size: 25px;
                 text-indent: 20px;
                 text-align: justify;
                 padding: 20px;
@@ -211,7 +227,7 @@ section.designs {
     border-radius: 20px;
 
     h1 {
-        font-family: "Finger Paint", cursive;
+        font-family: var(--font-rememberfy), cursive;
         font-style: italic;
         color: var(--texto-oscuro);
         margin: 10px;
@@ -280,7 +296,7 @@ section.about-us {
             max-width: 700px;
 
             h1 {
-                font-family: "Finger Paint", cursive;
+                font-family: var(--font-texts), cursive;
                 font-size: 24px;
                 color: var(--texto-oscuro);
             }
@@ -310,25 +326,23 @@ section.about-us {
 
 }
 
-.texto-superpuesto{
+.texto-superpuesto {
     display: flex;
     justify-content: center;
     position: relative;
     width: fit-content;
 
 
-    img{
-        width:  400px;
+    img {
+        width: 400px;
         height: 400px;
     }
-    h1{
+
+    h1 {
         position: absolute;
         top: 50%;
     }
 }
-
-
-
 
 .footer {
     display: flex;
