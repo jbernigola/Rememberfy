@@ -203,24 +203,59 @@ section.designs .each-design {
   justify-content: space-evenly;
   width: 100%;
   flex-wrap: wrap;
-  overflow-wrap: break-word;
-  padding: 80px;
+  /*
+  .design {
+      border-color: var(--texto-oscuro);
+      border-style: solid;
+      overflow: hidden;
+      min-width: 200px;
+      margin-bottom: 20px;
+
+      img {
+          width: 300px;
+          height: 300px;
+          opacity: .8;
+          transition: all .3s;
+
+          &:hover {
+              opacity: 1;
+          }
+      }
+  }*/
 }
-section.designs .each-design .design {
-  border-color: var(--texto-oscuro);
-  border-style: solid;
+section.designs .each-design .card {
+  box-sizing: border-box;
+  width: 250px;
+  height: 250px;
+  background: rgba(217, 217, 217, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-weight: bolder;
+  color: black;
+  margin: 20px;
+}
+section.designs .each-design .card:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+section.designs .each-design .card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+section.designs .each-design .card img {
   overflow: hidden;
-  min-width: 200px;
-  margin-bottom: 20px;
-}
-section.designs .each-design .design img {
-  width: 300px;
-  height: 300px;
-  opacity: 0.8;
-  transition: all 0.3s;
-}
-section.designs .each-design .design img:hover {
-  opacity: 1;
+  border-radius: 17px;
 }
 
 section.about-us {

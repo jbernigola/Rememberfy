@@ -5,6 +5,7 @@
     --font-rememberfy: "Finger Paint";
     --font-texts: "sans-serif";
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -129,7 +130,7 @@ header {
     display: flex;
     justify-content: center;
     position: relative;
-    
+
     .supertexto {
         position: absolute;
         max-width: 80vw;
@@ -233,9 +234,43 @@ section.designs {
         justify-content: space-evenly;
         width: 100%;
         flex-wrap: wrap;
-        overflow-wrap: break-word;
-        padding: 80px;
-        
+
+        .card {
+            box-sizing: border-box;
+            width: 250px;
+            height: 250px;
+            background: rgba(217, 217, 217, 0.58);
+            border: 1px solid white;
+            box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+            backdrop-filter: blur(6px);
+            border-radius: 17px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.5s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            user-select: none;
+            font-weight: bolder;
+            color: black;
+            margin: 20px;
+
+            &:hover {
+                border: 1px solid black;
+                transform: scale(1.05);
+            }
+
+            &:active {
+                transform: scale(0.95) rotateZ(1.7deg);
+            }
+
+            img {
+                overflow: hidden;
+                border-radius: 17px;
+            }
+        }
+
+        /*
         .design {
             border-color: var(--texto-oscuro);
             border-style: solid;
@@ -253,7 +288,7 @@ section.designs {
                     opacity: 1;
                 }
             }
-        }
+        }*/
     }
 
 
@@ -368,9 +403,4 @@ section.about-us {
         margin-bottom: 10px;
         justify-content: space-between;
     }
-}
-
-@media screen and (max-width: 805px) {
-
-   
 }
