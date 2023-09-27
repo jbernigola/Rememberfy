@@ -12,6 +12,9 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 html::-webkit-scrollbar {
   width: 0.8vw;
 }
@@ -41,6 +44,7 @@ body {
 }
 
 header {
+  grid-area: header;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -119,13 +123,16 @@ header .rememberfy-nav ul li a {
   color: white;
 }
 
-.main-index {
+#main-index {
+  position: absolute;
+  top: 0;
+}
+
+main {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  top: 0;
   background-color: white;
   z-index: 0;
   width: 100%;
@@ -168,7 +175,7 @@ section.bienvenidos {
   width: 100%;
   justify-content: center;
   flex-direction: row;
-  margin-top: 75px;
+  padding: 100px;
 }
 section.bienvenidos .div-bienvenidos {
   width: 100%;
@@ -177,6 +184,7 @@ section.bienvenidos .div-bienvenidos {
   height: min-content;
   display: flex;
   align-items: center;
+  margin: 40px;
 }
 section.bienvenidos .div-bienvenidos .texto-citado {
   justify-content: center;
@@ -197,7 +205,8 @@ section.bienvenidos .div-bienvenidos .texto-citado .hashtag {
   color: #ad57c0;
 }
 section.bienvenidos .div-bienvenidos .texto-citado p {
-  font-size: 25px;
+  font-family: "Sofia Sans";
+  font-size: 20px;
   text-align: justify;
   margin-top: 20px;
   color: #ad57c0;
@@ -212,37 +221,47 @@ section.proceso-eventos {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 75px;
+  width: 100%;
 }
 section.proceso-eventos h1 {
   font-family: "Sofia Sans", cursive;
   color: var(--color-primario);
-  margin-bottom: 25px;
+  height: -moz-min-content;
+  height: min-content;
 }
 section.proceso-eventos .procesos {
   display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 50px;
+  padding-inline: 0;
 }
 section.proceso-eventos .procesos a {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
   text-decoration: none;
+  margin-inline: 20px;
 }
 section.proceso-eventos .procesos a .proceso {
-  width: 10vw;
   margin: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   transition: all 0.3s;
-  max-width: 9.3vw;
 }
 section.proceso-eventos .procesos a .proceso h3 {
   font-family: "Sofia Sans", cursive;
+  text-align: center;
   margin-top: 25px;
   color: rgba(88, 0, 91, 0.8666666667);
 }
 section.proceso-eventos .procesos a .proceso p {
   font-family: "Sofia Sans", cursive;
   text-align: center;
+  color: #ad57c0;
+  max-width: 9.3vw;
 }
 section.proceso-eventos .procesos a .proceso:hover {
   transform: scale(1.2);
@@ -326,6 +345,9 @@ section.about-us {
   width: 100%;
   justify-content: center;
   flex-direction: column;
+  position: relative;
+  top: 100px;
+  grid-area: header;
 }
 section.about-us .articles-about-us {
   display: flex;
@@ -350,11 +372,12 @@ section.about-us .articles-about-us .textos-about-us {
   max-width: 700px;
 }
 section.about-us .articles-about-us .textos-about-us h1 {
-  font-family: var(--font-texts), cursive;
+  font-family: "Sofia Sans", cursive;
   font-size: 24px;
   color: var(--texto-oscuro);
 }
 section.about-us .articles-about-us .textos-about-us p {
+  font-family: "Sofia Sans", cursive;
   font-size: 16pt;
   text-indent: 20px;
   text-align: justify;
@@ -368,6 +391,24 @@ section.about-us .articles-about-us .contenedor-img-about-us #LOGO {
 section.about-us .articles-about-us .contenedor-img-about-us img {
   width: 336px;
   height: 216px;
+}
+section.about-us .proceso-paso-a-paso {
+  width: 100%;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+}
+section.about-us .proceso-paso-a-paso article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section.about-us .proceso-paso-a-paso article h2 {
+  font-family: "Sofia Sans", cursive;
+}
+section.about-us .proceso-paso-a-paso article p {
+  font-family: "Sofia Sans", cursive;
 }
 
 .texto-superpuesto {

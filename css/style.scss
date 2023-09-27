@@ -13,6 +13,8 @@
 }
 
 html {
+    scroll-behavior: smooth;
+
     &::-webkit-scrollbar {
         width: .8vw;
     }
@@ -48,6 +50,8 @@ body {
 }
 
 header {
+    grid-area: header;
+
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -134,14 +138,16 @@ header {
     }
 }
 
+#main-index {
+    position: absolute;
+    top: 0;
+}
 
-.main-index {
+main {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    top: 0;
     background-color: white;
     //margin-bottom: 20px; porque el footer esta dentro del main...
     z-index: 0;
@@ -198,8 +204,8 @@ section.bienvenidos {
     width: 100%;
     justify-content: center;
     flex-direction: row;
-    margin-top: 75px;
-    ;
+    padding: 100px;
+
     //background-color: #6429b7;
 
     .div-bienvenidos {
@@ -208,6 +214,7 @@ section.bienvenidos {
         height: min-content;
         display: flex;
         align-items: center;
+        margin: 40px;
 
 
         .texto-citado {
@@ -231,7 +238,8 @@ section.bienvenidos {
 
 
             p {
-                font-size: 25px;
+                font-family: "Sofia Sans";
+                font-size: 20px;
                 text-align: justify;
                 margin-top: 20px;
                 color: #ad57c0;
@@ -254,48 +262,57 @@ section.proceso-eventos {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 75px;
+    width: 100%;
 
     h1 {
         font-family: "Sofia Sans", cursive;
         color: var(--color-primario);
-        margin-bottom: 25px;
+        height: min-content;
     }
 
     .procesos {
         display: flex;
-        a{
+        width: 100%;
+        justify-content: center;
+        padding: 50px;
+        padding-inline: 0;
+
+        a {
+            width: fit-content;
+            display: flex;
             text-decoration: none;
+            margin-inline: 20px;
+
             .proceso {
-                width: 10vw;
                 margin: 40px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
                 transition: all .3s;
-                max-width: 9.3vw;
-    
+
                 h3 {
                     font-family: "Sofia Sans", cursive;
+                    text-align: center;
                     margin-top: 25px;
                     color: #58005bdd;
                 }
 
-                p{
+                p {
                     font-family: "Sofia Sans", cursive;
-                    text-align: center ;
-                    
+                    text-align: center;
+                    color: #ad57c0;
+                    max-width: 9.3vw;
+
+
                 }
-    
+
                 &:hover {
                     transform: scale(1.2);
                 }
             }
         }
-
     }
-
 }
 
 section.designs {
@@ -386,7 +403,8 @@ section.about-us {
     width: 100%;
     justify-content: center;
     flex-direction: column;
-
+    position: relative;
+    top: 100px;
 
     .articles-about-us {
         display: flex;
@@ -409,12 +427,13 @@ section.about-us {
             max-width: 700px;
 
             h1 {
-                font-family: var(--font-texts), cursive;
+                font-family: "Sofia Sans", cursive;
                 font-size: 24px;
                 color: var(--texto-oscuro);
             }
 
             p {
+                font-family: "Sofia Sans", cursive;
                 font-size: 16pt;
                 text-indent: 20px;
                 text-align: justify;
@@ -436,6 +455,27 @@ section.about-us {
             }
         }
     }
+
+    .proceso-paso-a-paso {
+        width: 100%;
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        padding: 100px;
+        article {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2{
+                font-family: "Sofia Sans", cursive;
+            }
+            p{
+                font-family: "Sofia Sans", cursive;
+            }
+        }
+    }
+
+    grid-area: header;
 
 }
 
