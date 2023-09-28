@@ -232,7 +232,7 @@ section.bienvenidos {
             }
 
             .hashtag {
-                font-family: "Satisfy", cursive;
+                font-family: 'Sofia Sans Condensed', sans-serif;
                 color: #ad57c0;
             }
 
@@ -462,14 +462,17 @@ section.about-us {
         display: flex;
         flex-direction: column;
         padding: 100px;
+
         article {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            h2{
+
+            h2 {
                 font-family: "Sofia Sans", cursive;
             }
-            p{
+
+            p {
                 font-family: "Sofia Sans", cursive;
             }
         }

@@ -201,7 +201,7 @@ section.bienvenidos .div-bienvenidos .texto-citado h1 {
   color: var(--texto-oscuro);
 }
 section.bienvenidos .div-bienvenidos .texto-citado .hashtag {
-  font-family: "Satisfy", cursive;
+  font-family: "Sofia Sans Condensed", sans-serif;
   color: #ad57c0;
 }
 section.bienvenidos .div-bienvenidos .texto-citado p {
