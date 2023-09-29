@@ -44,7 +44,6 @@ body {
 }
 
 header {
-  grid-area: header;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -93,6 +92,7 @@ header .rememberfy-nav ul {
   height: 100%;
   width: -moz-max-content;
   width: max-content;
+  margin: 0;
 }
 header .rememberfy-nav ul #li-icon {
   width: 50px;
@@ -139,6 +139,32 @@ main {
   overflow: hidden;
 }
 
+@media screen and (min-width: 759px) {
+  #nav-bootstrap {
+    display: none;
+  }
+}
+@media screen and (max-width: 758px) {
+  header {
+    background-color: var(--color-primario);
+  }
+  header .rememberfy-label {
+    display: none;
+  }
+  #banner {
+    display: none;
+  }
+  section.bienvenidos {
+    padding: 50px;
+  }
+  section.bienvenidos .div-bienvenidos {
+    justify-content: center;
+  }
+  section.bienvenidos .div-bienvenidos .contenedor-img-bienvenida iframe {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
 .banner {
   display: flex;
   justify-content: center;
@@ -179,12 +205,13 @@ section.bienvenidos {
 }
 section.bienvenidos .div-bienvenidos {
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
   height: -moz-min-content;
   height: min-content;
   display: flex;
   align-items: center;
   margin: 40px;
+  flex-wrap: wrap;
 }
 section.bienvenidos .div-bienvenidos .texto-citado {
   justify-content: center;
@@ -193,7 +220,6 @@ section.bienvenidos .div-bienvenidos .texto-citado {
   height: min-content;
   max-width: 600px;
   padding: 20px;
-  margin-right: 90px;
 }
 section.bienvenidos .div-bienvenidos .texto-citado h1 {
   font-family: "Sofia Sans", var(--font-texts), cursive;
@@ -231,10 +257,11 @@ section.proceso-eventos h1 {
 }
 section.proceso-eventos .procesos {
   display: flex;
-  width: 100%;
   justify-content: center;
   padding: 50px;
   padding-inline: 0;
+  flex-wrap: wrap;
+  width: 100%;
 }
 section.proceso-eventos .procesos a {
   width: -moz-fit-content;
@@ -261,7 +288,7 @@ section.proceso-eventos .procesos a .proceso p {
   font-family: "Sofia Sans", cursive;
   text-align: center;
   color: #ad57c0;
-  max-width: 9.3vw;
+  width: 145px;
 }
 section.proceso-eventos .procesos a .proceso:hover {
   transform: scale(1.2);
