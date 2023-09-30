@@ -439,6 +439,7 @@ section.about-us .proceso-paso-a-paso article p {
   max-width: 500px;
   text-align: center;
   z-index: 1;
+  margin-bottom: 20px;
 }
 .contact .content h2 {
   font-size: 36px;
@@ -464,21 +465,21 @@ section.about-us .proceso-paso-a-paso article p {
 }
 .contact .container .contactInfo .box {
   position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 40px 0;
+  max-width: 300px;
+  margin: 30px;
   display: flex;
   left: 20%;
 }
 .contact .container .contactInfo .box #icon {
-  width: 60px;
-  height: 60px;
-  background: transparent;
+  width: 50px;
+  height: 50px;
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  font-size: 40px;
+  font-size: 35px;
+  font-weight: 550;
 }
 .contact .container .contactInfo .box .text {
   display: flex;
@@ -489,8 +490,8 @@ section.about-us .proceso-paso-a-paso article p {
 .contact .container .contactInfo .box .text h2 {
   font-size: 20pt;
   font-weight: 500;
-  color: rgb(0, 173, 212);
-  text-shadow: 1px 1.5px 2px rgb(52, 52, 52);
+  color: var(--texto-oscuro);
+  text-shadow: 1px 2px 3px whitesmoke;
 }
 .contact .container .contactInfo .box .text p {
   font-weight: 700;
@@ -514,7 +515,7 @@ section.about-us .proceso-paso-a-paso article p {
 }
 .contact .container .contactForm h2 {
   font-size: 30px;
-  color: #df7979;
+  color: var(--texto-oscuro);
   font-weight: 800;
   text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
@@ -588,15 +589,22 @@ section.about-us .proceso-paso-a-paso article p {
   }
   .contact .container .contactInfo .box {
     padding-inline: 0;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    margin: 10px;
     position: relative;
     left: 0;
     justify-content: flex-start;
+    width: 300px;
   }
   .contact .container .contactForm {
     max-width: 500px;
     min-width: 300px;
     width: 100%;
+  }
+  .contact .container .contactForm h2 {
+    text-align: center;
+  }
+  .contact .container .contactForm .inputBox {
+    display: flex;
+    justify-content: center;
   }
 }/*# sourceMappingURL=style.css.map */
