@@ -17,7 +17,7 @@ html {
   scroll-behavior: smooth;
 }
 html::-webkit-scrollbar {
-  width: 0.8vw;
+  width: 1rem;
 }
 html::-webkit-scrollbar-thumb {
   background-color: #b229b7;
@@ -141,9 +141,12 @@ main {
   position: relative;
 }
 
-@media screen and (min-width: 759px) {
-  #nav-bootstrap {
-    display: none;
+@media screen and (max-width: 1300px) {
+  #banner #t1 {
+    font-size: 5.5vh;
+  }
+  #banner #t2 {
+    top: 73%;
   }
 }
 @media screen and (max-width: 758px) {
@@ -168,6 +171,26 @@ main {
   section.bienvenidos .div-bienvenidos {
     justify-content: center;
   }
+  section.bienvenidos .contenedor-img-bienvenida {
+    overflow: hidden;
+  }
+  section.bienvenidos .contenedor-img-bienvenida iframe {
+    min-width: 300px;
+  }
+  section.proceso-eventos h1 {
+    text-align: center;
+  }
+  section.proceso-eventos .procesos {
+    gap: 2em;
+  }
+  section.proceso-eventos .procesos a {
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-inline: 0px !important;
+  }
+  section.proceso-eventos .procesos a .proceso {
+    margin: 0px !important;
+  }
 }
 .banner {
   display: flex;
@@ -184,7 +207,7 @@ main {
 .banner #t1 {
   font-size: 34px;
   top: 25%;
-  font-size: 6vh;
+  font-size: 7vh;
   top: 30%;
 }
 .banner #t2 {
@@ -241,6 +264,9 @@ section.bienvenidos .div-bienvenidos .texto-citado p {
   margin-top: 20px;
   color: #ad57c0;
 }
+section.bienvenidos .div-bienvenidos .contenedor-img-bienvenida {
+  display: flex;
+}
 section.bienvenidos .div-bienvenidos .contenedor-img-bienvenida img {
   width: 336px;
   height: 216px;
@@ -251,7 +277,6 @@ section.proceso-eventos {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
 }
 section.proceso-eventos h1 {
   font-family: "Sofia Sans", cursive;
@@ -396,6 +421,7 @@ section.about-us .proceso-paso-a-paso article p {
   position: relative;
   bottom: 0;
   width: 100vw;
+  z-index: 1;
 }
 .footer p {
   margin: 10px;
@@ -416,15 +442,15 @@ section.about-us .proceso-paso-a-paso article p {
   background-image: url(../assets/images/contact-us-bkg.jpg);
   background-size: cover;
   background-position: center center;
-  height: 100%;
+  min-height: 100vh;
   position: absolute;
   width: 100%;
-  filter: blur(2px);
+  height: 100%;
   z-index: 0;
 }
 
 .contact {
-  z-index: 0;
+  z-index: 1;
   position: relative;
   min-height: 80vh;
   padding: 50px 100px;
@@ -433,6 +459,7 @@ section.about-us .proceso-paso-a-paso article p {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  min-height: 92vh;
   font-family: "Sofia Sans", cursive;
 }
 .contact .content {
@@ -444,15 +471,17 @@ section.about-us .proceso-paso-a-paso article p {
 .contact .content h2 {
   font-size: 36px;
   font-style: normal;
-  color: white;
-  text-shadow: 2px 2px 7px black;
+  color: var(--color-primario);
+  text-shadow: 2px 2px 3px white;
 }
 .contact .content p {
+  font-size: 24px;
   font-weight: 700;
-  color: white;
-  text-shadow: 2px 2px 3px black;
+  color: var(--color-primario);
+  text-shadow: 2px 2px 3px white;
 }
 .contact .container {
+  z-index: 1;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -490,22 +519,22 @@ section.about-us .proceso-paso-a-paso article p {
 .contact .container .contactInfo .box .text h2 {
   font-size: 20pt;
   font-weight: 500;
-  color: var(--texto-oscuro);
-  text-shadow: 1px 2px 3px whitesmoke;
+  color: var(--color-primario);
+  text-shadow: 1px 2px 1px rgb(255, 255, 255);
 }
 .contact .container .contactInfo .box .text p {
+  font-style: italic;
   font-weight: 700;
-  color: whitesmoke;
-  text-shadow: 2px 2px 2px black;
+  color: white;
+  text-shadow: 2px 2px 1px black;
 }
 .contact .container .contactInfo .box .text a {
   font-weight: 700;
-  color: whitesmoke;
-  text-shadow: 2px 2px 2px black;
+  color: white;
+  text-shadow: 2px 2px 1px black;
   text-decoration: none;
 }
 .contact .container .contactForm {
-  z-index: 1;
   width: 50%;
   max-width: 500px;
   min-width: 400px;
@@ -515,11 +544,12 @@ section.about-us .proceso-paso-a-paso article p {
 }
 .contact .container .contactForm h2 {
   font-size: 30px;
-  color: var(--texto-oscuro);
+  color: var(--color-primario);
   font-weight: 800;
-  text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 .contact .container .contactForm .inputBox {
+  display: flex;
+  justify-content: center;
   position: relative;
   width: 100%;
   margin-top: 10px;
@@ -575,7 +605,7 @@ section.about-us .proceso-paso-a-paso article p {
   color: grey;
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1110px) {
   .contact {
     padding: 50px;
   }

@@ -17,7 +17,7 @@ html {
     scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
-        width: .8vw;
+        width: 1rem;
     }
 
     &::-webkit-scrollbar-thumb {
@@ -156,11 +156,16 @@ main {
     position: relative;
 }
 
-@media screen and (min-width: 759px) {
-    #nav-bootstrap {
-        display: none;
-    }
+@media screen and (max-width: 1300px) {
+    #banner {
+        #t1 {
+            font-size: 5.5vh;
+        }
 
+        #t2 {
+            top: 73%;
+        }
+    }
 }
 
 @media screen and (max-width: 758px) {
@@ -190,9 +195,34 @@ main {
 
         .div-bienvenidos {
             justify-content: center;
-
         }
 
+        .contenedor-img-bienvenida {
+            overflow: hidden;
+            iframe {
+                min-width: 300px;
+            }
+        }
+    }
+
+    section.proceso-eventos {
+        h1 {
+            text-align: center;
+        }
+
+        .procesos {
+            gap: 2em;
+
+            a {
+                width: fit-content;
+                margin-inline: 0px !important;
+
+                .proceso {
+                    margin: 0px !important;
+
+                }
+            }
+        }
     }
 }
 
@@ -218,7 +248,7 @@ main {
         font-size: 34px;
         top: 25%;
         // BANNER GRANDE
-        font-size: 6vh;
+        font-size: 7vh;
         top: 30%;
     }
 
@@ -288,6 +318,7 @@ section.bienvenidos {
         }
 
         .contenedor-img-bienvenida {
+            display: flex;
 
             img {
                 width: 336px;
@@ -303,7 +334,6 @@ section.proceso-eventos {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;
 
     h1 {
         font-family: "Sofia Sans", cursive;
@@ -470,6 +500,7 @@ section.about-us {
     position: relative;
     bottom: 0;
     width: 100vw;
+    z-index: 1;
 
     p {
         margin: 10px;
@@ -494,10 +525,10 @@ section.about-us {
     background-image: url(../assets/images/contact-us-bkg.jpg);
     background-size: cover;
     background-position: center center;
-    height: 100%;;
+    min-height: 100vh;
     position: absolute;
     width: 100%;
-    filter: blur(2px);
+    height: 100%;
     z-index: 0;
 }
 
@@ -505,7 +536,7 @@ section.about-us {
 
 
 .contact {
-    z-index: 0;
+    z-index: 1;
     position: relative;
     min-height: 80vh;
     padding: 50px 100px;
@@ -514,6 +545,7 @@ section.about-us {
     align-items: center;
     flex-direction: column;
     width: 100%;
+    min-height: 92vh;
     font-family: "Sofia Sans", cursive;
 
     .content {
@@ -525,19 +557,22 @@ section.about-us {
         h2 {
             font-size: 36px;
             font-style: normal;
-            color: white;
-            text-shadow: 2px 2px 7px black;
+            color: var(--color-primario);
+            text-shadow: 2px 2px 3px white;
+
         }
 
         p {
+            font-size: 24px;
             font-weight: 700;
-            color: white;
-            text-shadow: 2px 2px 3px black;
+            color: var(--color-primario);
+            text-shadow: 2px 2px 3px white;
 
         }
     }
 
     .container {
+        z-index: 1;
         width: 100%;
         display: flex;
         justify-content: center;
@@ -577,21 +612,22 @@ section.about-us {
                     h2 {
                         font-size: 20pt;
                         font-weight: 500;
-                        color: var(--texto-oscuro);
-                        text-shadow: 1px 2px 3px whitesmoke;
+                        color: var(--color-primario);
+                        text-shadow: 1px 2px 1px rgb(255, 255, 255);
 
                     }
 
                     p {
+                        font-style: italic;
                         font-weight: 700;
-                        color: whitesmoke;
-                        text-shadow: 2px 2px 2px black;
+                        color: white;
+                        text-shadow: 2px 2px 1px black;
                     }
 
                     a {
                         font-weight: 700;
-                        color: whitesmoke;
-                        text-shadow: 2px 2px 2px black;
+                        color: white;
+                        text-shadow: 2px 2px 1px black;
                         text-decoration: none;
                     }
 
@@ -601,23 +637,21 @@ section.about-us {
         }
 
         .contactForm {
-            z-index: 1;
             width: 50%;
             max-width: 500px;
             min-width: 400px;
             padding: 40px;
             background-color: white;
             margin-top: 20px;
-
             h2 {
                 font-size: 30px;
-                color: var(--texto-oscuro);
+                color: var(--color-primario);
                 font-weight: 800;
-                text-shadow: 1px 1px 2px rgb(0, 0, 0);
-
             }
 
             .inputBox {
+                display: flex;
+                justify-content: center;
                 position: relative;
                 width: 100%;
                 margin-top: 10px;
@@ -635,7 +669,6 @@ section.about-us {
                 }
 
                 input {
-
 
                     &:valid~span {
                         color: #e91e6286;
@@ -666,6 +699,7 @@ section.about-us {
 
                 }
 
+
                 input[type="submit"] {
                     width: 100px;
                     background-color: #00bcd4;
@@ -674,6 +708,7 @@ section.about-us {
                     cursor: pointer;
                     padding: 10px;
                     font-size: 18px;
+
                 }
 
                 span {
@@ -692,12 +727,13 @@ section.about-us {
     }
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1110px) {
     .contact {
         padding: 50px;
 
         .container {
             flex-direction: column;
+
             .contactInfo {
                 width: 100%;
                 margin-bottom: 40px;
@@ -717,13 +753,14 @@ section.about-us {
                 max-width: 500px;
                 min-width: 300px;
                 width: 100%;
-                h2{
+
+                h2 {
                     text-align: center;
                 }
-                .inputBox{
+
+                .inputBox {
                     display: flex;
                     justify-content: center;
-                    
                 }
             }
         }
