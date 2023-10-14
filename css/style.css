@@ -383,7 +383,7 @@ section.about-us .articles-about-us #contenedor-img-about-us img {
   height: -moz-min-content;
   height: min-content;
   font-size: 3em;
-  font-family: "Sofia Sans", cursive;
+  font-family: "Sofia Sans Condensed", cursive;
   color: var(--texto-oscuro);
 }
 .paso-a-paso .proceso-paso-a-paso {
@@ -395,7 +395,7 @@ section.about-us .articles-about-us #contenedor-img-about-us img {
 .paso-a-paso .proceso-paso-a-paso article {
   position: relative;
   right: 0;
-  width: 50%;
+  width: 60vw;
   background-color: rgb(242, 220, 245);
   margin: 20px;
   padding: 30px;
@@ -408,8 +408,8 @@ section.about-us .articles-about-us #contenedor-img-about-us img {
   height: -moz-min-content;
   height: min-content;
   width: 100%;
-  font-size: 2em;
-  font-family: "Sofia Sans", cursive;
+  font-size: 3.2em;
+  font-family: "Sofia Sans Condensed", cursive;
   color: var(--texto-oscuro);
 }
 .paso-a-paso .proceso-paso-a-paso article p {
