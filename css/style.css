@@ -4,6 +4,7 @@
   --colorete: linear-gradient(to right, #9c29b7 60%, #6429b7);
   --font-rememberfy: "Finger Paint";
   --font-texts: "sans-serif";
+  --sofia-font: "Sofia Sans" ;
 }
 
 * {
@@ -685,13 +686,124 @@ section.about-us .articles-about-us #contenedor-img-about-us img {
 }
 .team {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+  width: 80%;
+  min-height: 70vh;
+  justify-content: center;
+  align-items: center;
 }
-.team .integrante {
+.team .card {
+  position: relative;
+  width: 190px;
+  height: 254px;
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
 }
-.team .integrante img {
-  width: 200px;
+.team .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg, var(--color-primario), #03a9f4);
+  border-radius: 20px;
+}
+.team .card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(315deg, var(--color-primario), #03a9f4);
+  filter: blur(10px);
+}
+.team .card b {
+  position: absolute;
+  inset: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+.team .card img {
+  z-index: 3;
+  scale: 0.8;
+  opacity: 0.6;
+  transition: 0.3s;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.team .card:hover img {
+  scale: 0.6;
+  opacity: 1;
+  transform: translateY(-70px);
+  border-radius: 0px;
+  padding-top: 30px;
+}
+.team .card:hover .content {
+  transform: scale(1);
+  bottom: 25px;
+}
+.team .card .content {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0);
+  transition: 0.3s;
+}
+.team .card .content .title {
+  position: relative;
+  color: #fff;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  font-style: var(--sofia-font);
+}
+.team .card .content .title span {
+  font-style: var(--sofia-font), cursive;
+  font-weight: 300;
+  font-size: 0.7em;
+}
+.team .card .content .sci {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+.team .card .content .sci li {
+  list-style: none;
+}
+.team .card .content .sci li .fa-brands {
+  width: 14px;
+}
+.team .card .content .sci li .fa-facebook {
+  width: 10px;
+}
+.team .card .content .sci li a {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.2);
+  fill: currentColor;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.team .card .content .sci li a:hover {
+  fill: currentColor;
+  color: rgb(255, 255, 255);
 }/*# sourceMappingURL=style.css.map */

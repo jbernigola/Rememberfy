@@ -4,6 +4,7 @@
     --colorete: linear-gradient(to right, #9c29b7 60%, #6429b7);
     --font-rememberfy: "Finger Paint";
     --font-texts: "sans-serif";
+    --sofia-font: "Sofia Sans"
 }
 
 * {
@@ -199,6 +200,7 @@ main {
 
         .contenedor-img-bienvenida {
             overflow: hidden;
+
             iframe {
                 min-width: 300px;
             }
@@ -454,12 +456,14 @@ section.about-us {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    h1{
+
+    h1 {
         height: min-content;
         font-size: 3em;
         font-family: "Sofia Sans Condensed", cursive;
         color: var(--texto-oscuro);
     }
+
     .proceso-paso-a-paso {
         width: 90%;
         display: flex;
@@ -800,12 +804,13 @@ section.about-us {
 
         #contenedor-img-about-us {
             justify-content: center;
-            img{
+
+            img {
                 max-width: 50vw;
                 margin-bottom: 40px;
             }
 
-            #LOGO{
+            #LOGO {
                 max-width: 50vw;
                 max-height: 50vw;
                 margin-right: 0 !important;
@@ -815,15 +820,146 @@ section.about-us {
 }
 
 //TEAM
-.team{
+.team {
     display: flex;
-    flex-direction: column;
-    .integrante{
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+    width: 80%;
+    min-height: 70vh;
+    justify-content: center;
+    align-items: center;
+
+    .card {
+        position: relative;
+        width: 190px;
+        height: 254px;
         display: flex;
-        justify-content: space-evenly;
-        flex-direction: row-reverse;
-        img{
-            width: 200px;
+        justify-content: center;
+        align-items: center;
+        margin: 40px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(315deg, var(--color-primario), #03a9f4);
+            border-radius: 20px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(315deg, var(--color-primario), #03a9f4);
+            filter: blur(10px);
+
+        }
+
+        b {
+            position: absolute;
+            inset: 6px;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 2;
+        }
+
+        img {
+            z-index: 3;
+            scale: 0.8;
+            opacity: 0.6;
+            transition: 0.3s;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        &:hover {
+            img {
+                scale: 0.6;
+                opacity: 1;
+                transform: translateY(-70px);
+                border-radius: 0px;
+                padding-top: 30px;
+            }
+
+            .content {
+                transform: scale(1);
+                bottom: 25px;
+            }
+        }
+
+        .content {
+            position: absolute;
+            z-index: 3;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform: scale(0);
+            transition: 0.3s;
+
+            .title {
+                position: relative;
+                color: #fff;
+
+                font-size: 1em;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                text-align: center;
+                font-style: var(--sofia-font);
+
+                span {
+                    font-style: var(--sofia-font), cursive;
+                    font-weight: 300;
+                    font-size: 0.70em;
+                }
+            }
+
+            .sci {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                margin-top: 5px;
+
+                li {
+                    list-style: none;
+
+                    .fa-brands {
+                        width: 14px;
+                    }
+
+                    .fa-facebook {
+                        width: 10px;
+                    }
+
+                    a {
+                        position: relative;
+                        text-decoration: none;
+                        color: rgba(255, 255, 255, 0.5);
+                        background: rgba(0, 0, 0, 0.2);
+                        fill: currentColor;
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 4px;
+                        transition: 0.3s;
+
+                        &:hover {
+                            fill: currentColor;
+                            color: rgb(255, 255, 255);
+                        }
+                    }
+                }
+            }
         }
     }
 }
