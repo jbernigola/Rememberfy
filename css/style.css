@@ -125,6 +125,9 @@ header .rememberfy-nav ul li a {
   text-decoration: none;
   color: white;
 }
+header .rememberfy-nav ul li a i {
+  color: white;
+}
 
 #main-index {
   position: absolute;
@@ -136,7 +139,7 @@ main {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: rgb(242, 220, 245);
   z-index: 0;
   width: 100%;
   overflow: hidden;
@@ -278,6 +281,7 @@ section.proceso-eventos {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 section.proceso-eventos h1 {
   font-family: "Sofia Sans", cursive;
@@ -286,12 +290,12 @@ section.proceso-eventos h1 {
   height: min-content;
 }
 section.proceso-eventos .procesos {
+  width: 90%;
   display: flex;
   justify-content: center;
-  padding: 50px;
   padding-inline: 0;
+  margin-top: 25px;
   flex-wrap: wrap;
-  width: 100%;
 }
 section.proceso-eventos .procesos a {
   width: -moz-fit-content;
@@ -323,6 +327,42 @@ section.proceso-eventos .procesos a .proceso p {
 section.proceso-eventos .procesos a .proceso:hover {
   transform: scale(1.2);
 }
+section.proceso-eventos .contact-button {
+  display: inline-block;
+  width: 8em;
+  height: 2.6em;
+  margin: 20px;
+  line-height: 2.5em;
+  overflow: hidden;
+  position: relative;
+  font-family: var(--sofia-font);
+  font-size: 17px;
+  z-index: 1;
+  color: var(--color-primario);
+  border: 2px solid var(--color-primario);
+  border-radius: 6px;
+}
+section.proceso-eventos .contact-button::before {
+  position: absolute;
+  content: "";
+  background: var(--color-primario);
+  width: 270px;
+  height: 150px;
+  z-index: -1;
+  border-radius: 50%;
+}
+section.proceso-eventos .contact-button:hover {
+  color: white;
+}
+section.proceso-eventos .contact-button:hover::before {
+  top: -30px;
+  left: -30px;
+}
+section.proceso-eventos .contact-button::before {
+  top: 100%;
+  left: 100%;
+  transition: 0.7s all;
+}
 
 section.about-us {
   display: flex;
@@ -331,6 +371,7 @@ section.about-us {
   flex-direction: column;
   position: relative;
   align-items: center;
+  background-color: rgb(242, 220, 245);
 }
 section.about-us .articles-about-us {
   display: flex;
@@ -340,7 +381,7 @@ section.about-us .articles-about-us {
   left: 5%;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(242, 220, 245);
+  background-color: whitesmoke;
   border-radius: 20px;
   border-style: solid;
   border-color: var(--texto-oscuro);
@@ -358,7 +399,7 @@ section.about-us .articles-about-us #textos-about-us h1 {
 }
 section.about-us .articles-about-us #textos-about-us p {
   font-family: "Sofia Sans", cursive;
-  font-size: 1.4em;
+  font-size: 20px;
   text-indent: 40px;
   text-align: justify;
   color: #ad57c0;
@@ -388,35 +429,60 @@ section.about-us .articles-about-us #contenedor-img-about-us img {
   color: var(--texto-oscuro);
 }
 .paso-a-paso .proceso-paso-a-paso {
-  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .paso-a-paso .proceso-paso-a-paso article {
-  position: relative;
-  right: 0;
-  width: 60vw;
-  background-color: rgb(242, 220, 245);
+  max-width: 60vw;
+  background-color: whitesmoke;
   margin: 20px;
-  padding: 30px;
+  padding: 55px;
+  padding-inline: 40px;
   border-radius: 20px;
   border-style: solid;
   border-color: var(--texto-oscuro);
   min-width: 400px;
 }
+.paso-a-paso .proceso-paso-a-paso article:hover {
+  border-color: #03a9f4;
+}
+.paso-a-paso .proceso-paso-a-paso article:hover h1 {
+  color: #03a9f4;
+}
+.paso-a-paso .proceso-paso-a-paso article:hover h1 i {
+  color: skyblue;
+}
+.paso-a-paso .proceso-paso-a-paso article:hover p {
+  color: #03a9f4;
+}
 .paso-a-paso .proceso-paso-a-paso article h1 {
   height: -moz-min-content;
   height: min-content;
   width: 100%;
-  font-size: 3.2em;
+  font-size: 45px;
   font-family: "Sofia Sans Condensed", cursive;
   color: var(--texto-oscuro);
+}
+.paso-a-paso .proceso-paso-a-paso article h1 .fa-lightbulb {
+  color: rgba(212, 255, 0, 0.8039215686);
+}
+.paso-a-paso .proceso-paso-a-paso article h1 .fa-hand-holding-dollar {
+  color: #51d12e;
+}
+.paso-a-paso .proceso-paso-a-paso article h1 .fa-handshake-simple {
+  color: #0051ff;
+}
+.paso-a-paso .proceso-paso-a-paso article h1 .fa-calendar-days {
+  color: #1fff8b;
+}
+.paso-a-paso .proceso-paso-a-paso article h1 .fa-champagne-glasses {
+  color: rgba(212, 255, 0, 0.8039215686);
 }
 .paso-a-paso .proceso-paso-a-paso article p {
   text-align: justify;
   color: #ad57c0;
-  font-size: 18px;
+  font-size: 20px;
   text-indent: 40px;
   font-family: "Sofia Sans", cursive;
 }
@@ -669,7 +735,11 @@ section.about-us .articles-about-us #contenedor-img-about-us img {
 @media screen and (max-width: 1410px) {
   .articles-about-us {
     flex-direction: column;
-    min-width: 380px;
+    min-width: 400px;
+  }
+  .articles-about-us #textos-about-us {
+    padding: 30px !important;
+    max-width: 700px !important;
   }
   .articles-about-us #contenedor-img-about-us {
     justify-content: center;
