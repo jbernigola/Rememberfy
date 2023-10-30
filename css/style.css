@@ -372,6 +372,13 @@ section.about-us {
   position: relative;
   align-items: center;
   background-color: rgb(242, 220, 245);
+  --s: 200px;
+  /* control the size */
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+  background: repeating-conic-gradient(from 30deg, rgba(0, 0, 0, 0) 0 120deg, var(--c3) 0 180deg) calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577), repeating-conic-gradient(from 30deg, var(--c1) 0 60deg, var(--c2) 0 120deg, var(--c3) 0 180deg);
+  background-size: var(--s) calc(var(--s) * 0.577);
 }
 section.about-us .articles-about-us {
   display: flex;
@@ -416,17 +423,27 @@ section.about-us .articles-about-us #contenedor-img-about-us img {
 
 .paso-a-paso {
   display: flex;
-  margin-top: 50px;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: 100%;
+  --s: 200px;
+  /* control the size */
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+  background: repeating-conic-gradient(from 30deg, rgba(0, 0, 0, 0) 0 120deg, var(--c3) 0 180deg) calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577), repeating-conic-gradient(from 30deg, var(--c1) 0 60deg, var(--c2) 0 120deg, var(--c3) 0 180deg);
+  background-size: var(--s) calc(var(--s) * 0.577);
 }
 .paso-a-paso h1 {
+  margin-top: 30px;
   height: -moz-min-content;
   height: min-content;
-  font-size: 3em;
+  font-size: 5em;
   font-family: "Sofia Sans Condensed", cursive;
   color: var(--texto-oscuro);
+  text-shadow: 1px 2px 3px white;
 }
 .paso-a-paso .proceso-paso-a-paso {
   display: flex;
@@ -457,6 +474,7 @@ section.about-us .articles-about-us #contenedor-img-about-us img {
   color: #03a9f4;
 }
 .paso-a-paso .proceso-paso-a-paso article h1 {
+  margin-top: 0px;
   height: -moz-min-content;
   height: min-content;
   width: 100%;
@@ -754,21 +772,44 @@ section.about-us .articles-about-us #contenedor-img-about-us img {
     margin-right: 0 !important;
   }
 }
+#team-main {
+  width: 100%;
+  height: 100%;
+  --s: 200px;
+  /* control the size */
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+  background: repeating-conic-gradient(from 30deg, rgba(0, 0, 0, 0) 0 120deg, var(--c3) 0 180deg) calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577), repeating-conic-gradient(from 30deg, var(--c1) 0 60deg, var(--c2) 0 120deg, var(--c3) 0 180deg);
+  background-size: var(--s) calc(var(--s) * 0.577);
+}
+
 .team {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   background-color: white;
-  width: 90%;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
+  width: 90%;
+  --s: 194px;
+  /* control the size */
+  --c1: #fffadb;
+  --c2: #acc4a3;
+  --_l: #0000 calc(25% / 3), var(--c1) 0 25%, #0000 0;
+  --_g: conic-gradient(from 120deg at 50% 87.5%, var(--c1) 120deg, #0000 0);
+  background: var(--_g), var(--_g) 0 calc(var(--s) / 2), conic-gradient(from 180deg at 75%, var(--c2) 60deg, rgba(0, 0, 0, 0) 0), conic-gradient(from 60deg at 75% 75%, var(--c1) 0 60deg, rgba(0, 0, 0, 0) 0), linear-gradient(150deg, var(--_l)) 0 calc(var(--s) / 2), conic-gradient(at 25% 25%, rgba(0, 0, 0, 0) 50%, var(--c2) 0 240deg, var(--c1) 0 300deg, var(--c2) 0), linear-gradient(-150deg, var(--_l)) #55897c;
+  background-size: calc(0.866 * var(--s)) var(--s);
 }
 .team h1 {
-  padding: 40px;
-  font-size: 40px;
+  padding-top: 40px;
+  text-align: center;
+  font-size: 3em;
   font-family: var(--sofia-font);
   color: var(--color-primario);
   font-style: italic;
+  text-shadow: 2px 2px 2px white;
 }
 .team .card {
   position: relative;
