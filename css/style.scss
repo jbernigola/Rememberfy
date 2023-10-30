@@ -60,7 +60,7 @@ header {
     background-color: transparent;
     transition: background-color 0.3s ease;
     padding-inline: 5%;
-    z-index: 1;
+    z-index: 5;
     top: 0;
     position: fixed;
 
@@ -913,11 +913,18 @@ section.about-us {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: whitesmoke;
-    width: 80%;
-    min-height: 70vh;
+    background-color: white;
+    width: 90%;
     justify-content: center;
     align-items: center;
+
+    h1{
+        padding: 40px;
+        font-size: 40px;
+        font-family: var(--sofia-font);
+        color: var(--color-primario);
+        font-style: italic;
+    }
 
     .card {
         position: relative;
@@ -959,9 +966,10 @@ section.about-us {
         }
 
         img {
+
             z-index: 3;
             scale: 0.8;
-            opacity: 0.6;
+            opacity: 0.9;
             transition: 0.3s;
             overflow: hidden;
             border-radius: 20px;
@@ -971,7 +979,7 @@ section.about-us {
             img {
                 scale: 0.6;
                 opacity: 1;
-                transform: translateY(-70px);
+                transform: translateY(-80px);
                 border-radius: 0px;
                 padding-top: 30px;
             }
@@ -1000,7 +1008,7 @@ section.about-us {
                 letter-spacing: 0.1em;
                 text-transform: uppercase;
                 text-align: center;
-                font-style: var(--sofia-font);
+                font-family: var(--sofia-font);
 
                 span {
                     font-style: var(--sofia-font), cursive;
