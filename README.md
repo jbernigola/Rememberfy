@@ -1,4 +1,4 @@
-# [Rememberfy!](https://jbernigola.github.io/Rememberfy 'Rememberfy!')
+# [Rememberfy!](https://rememberfy.vercel.app 'Rememberfy!')
 
 Rememberfy © 2023 - Developed by ***Juanito***
 
